@@ -13,7 +13,7 @@ spec:
       targetPort: {{ .Values.Zeppelin.ContainerPort }}
   selector:
     component: "{{ .Release.Name }}-{{ .Values.Zeppelin.Component }}"
-  type: "LoadBalancer"
+  type: "ClusterIP"
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
